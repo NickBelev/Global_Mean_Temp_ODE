@@ -36,7 +36,7 @@ def heun_method(T0, t0, t_end, steps_per_year=10, log_file="heun_steps.txt"):
             T_next = T + h * avg_slope
             t_next = t + h
 
-            # Step-by-step explanation (elementary phrasing)
+            # Step-by-step explanation (how we get from each point to the next)
             f.write(f"Step {i+1}:\n")
             f.write(f"  Point i: (t={t:.2f}, T={T:.4f})\n")
             f.write(f"  Slope at i = {slope_i:.6f}\n")
@@ -67,4 +67,5 @@ plt.title("Heun Approximation of Global Average Temperature Model", fontsize=14,
 plt.grid(alpha=0.3)
 plt.legend()
 plt.tight_layout()
+
 plt.show()
